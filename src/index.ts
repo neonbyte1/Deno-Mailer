@@ -179,3 +179,9 @@ export default mailer
  * @description Exposes shared interfaces and type aliases.
  */
 export type * from '@app/Types.ts'
+
+/**
+ * Re-export transport types.
+ * @description Exposes the socket abstraction that backs every runtime.
+ */
+export type * from '@runtime/Transport.ts'
