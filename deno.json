@@ -61,7 +61,8 @@
     "exclude": ["tests/**/*.d.ts"]
   },
   "tasks": {
-    "check": "deno fmt src/ && deno lint src/ && deno check src/",
+    "fmt": "deno fmt src/ tests/",
+    "check": "deno fmt --check src/ tests/ && deno lint src/ && deno check src/ tests/",
     "test": "deno test --allow-net --allow-env tests/"
   },
   "imports": {

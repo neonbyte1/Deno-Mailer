@@ -62,7 +62,7 @@ class SmtpClientPool {
   /** Busy SMTP clients currently in use */
   private busyClients = new Set<SMTP.SmtpClient>()
   /** Idle timer per pooled client */
-  private idleTimerByClient = new Map<SMTP.SmtpClient, number>()
+  private idleTimerByClient = new Map<SMTP.SmtpClient, SMTP.TimerHandle>()
   /** Processed message count per pooled client */
   private messageCountByClient = new Map<SMTP.SmtpClient, number>()
   /** Maximum messages before recycle */
